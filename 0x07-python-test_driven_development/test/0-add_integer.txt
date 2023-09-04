@@ -1,0 +1,44 @@
+0-add_integer module test cases
+=================
+
+0-add_integer has two integers/floats as the arg and it returns the sum of the two integers
+
+Implementing ''0-add_integer''
+====================
+
+Importing the add_integer function from the module:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Check the module docstring:
+    >>> m = __import__("0-add_integer").__doc__
+    >>> len(m) > 1
+    True
+
+Check the function docstring:
+    >>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
+    
+Check for regular addition:
+    >>> add_integer(1, 3)
+    4
+
+Check positive and negative:
+    >>> add_integer(4, -6)
+    -2
+
+Check for negative with positive:
+    >>> add_integer(-3,5)
+    2
+
+Check addition over multiple values:
+    >>> [add_integer(i, i ** 2) for i in range(6)]
+    [0, 2, 6, 12, 20, 30]
+
+Add float and int:
+    >>> add_integer(2.1, 4)
+    6
+
+Add int with float:
+    >>> add_integer(5, 7.8)
+    12
