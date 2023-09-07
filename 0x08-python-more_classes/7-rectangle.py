@@ -71,7 +71,7 @@ class Rectangle:
                     rectangle += type(self).print_symbol
             if column < self.__height - 1:
                 rectangle += "\n"
-        return (rectangle)
+            return (rectangle)
 
     def __repr__(self):
         """returns a string representation of the rectangle"""
@@ -80,4 +80,4 @@ class Rectangle:
     def __del__(self):
         """prints a message for every object that is deleted"""
         print("Bye rectangle...")
-    Rectangle.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
