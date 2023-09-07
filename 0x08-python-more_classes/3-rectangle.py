@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-Defining class Rectangle
+Defines a class Rectangle
 """
 
 
 class Rectangle:
     """Representation of a rectangle"""
-    def __init__(self, width=0, height=0)
-        """Initializing the rectangle"""
-        self.width = width
-        self.height = height
+    def __init__(self, width=0, height=0):
+    """Initializes the rectangle"""
+    self.width = width
+    self.height = height
 
     @property
     def width(self):
@@ -54,5 +54,5 @@ class Rectangle:
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join("#" * self.__width
-                                for j in range(self.__height))
+			        for j in range(self.__height))
         return string
