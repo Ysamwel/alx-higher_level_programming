@@ -15,7 +15,7 @@ if __name__ == "__main__":
     if argv[1].isdigit() is False:
         print("N must be a number")
         exit(1)
-    n = int(argv[1]
+    n = int(argv[1])
     if n < 4:
         print("N must be at least 4")
         exit(1)
@@ -29,18 +29,18 @@ if __name__ == "__main__":
         for x in range(n):
             if y == a[x][1]:
                 return True
-        return False
+            return False
 
     def reject(x, y):
-    """determines whether or not to reject the solution"""
-    if (already_exists(y)):
-        return False
-    i = 0
-    while(i < x):
-        if abs(a[i][1] - y) == abs(i - x):
+        """determines whether or not to reject the solution"""
+        if (already_exists(y)):
             return False
-        i += 1
-    return True
+        i = 0
+        while(i < x):
+            if abs(a[i][1] - y) == abs(i - x):
+                return False
+            i += 1
+        return True
 
     def clear_a(x):
         """clears the answers from the point of failure on"""
