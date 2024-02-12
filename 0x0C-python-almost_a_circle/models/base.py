@@ -5,7 +5,6 @@ class Base:
     '''Representation of the Base class of hierarchy.'''
 
     __nb_objects = 0
-
     def __init__(self, id=None):
         '''constructor'''
         if id is not None:
