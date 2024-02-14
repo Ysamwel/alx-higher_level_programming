@@ -16,54 +16,54 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width of the rectangle."""
+        """gets the width of rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """sets the width of the rectangle"""
         self.validate_integer("width", value, False)
-        """"value of width."""
         self.__width = value
 
     @property
     def height(self):
-        """height of the rectangle."""
+        """gets height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """"value of height."""
+        """sets height of the rectangle."""
         self.validate_integer("height", value, False)
         self.__height = value
 
     @property
     def x(self):
-        """x of the rectangle."""
+        """gets x-coordinate of the rectangle."""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """"value of x."""
+        """sets x-coordinate of the rectangle."""
         self.validate_integer("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """y of the rectangle."""
+        """gets y-coordinate  of the rectangle."""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """"value of y."""
+        """sets y-coodinate of the rectangle."""
         self.validate_integer("y", value)
         self.__y = value
 
     def validate_integer(self, name, value, eq=True):
-        """validation method for value"""
+        """validates if the value is an integer"""
         """if type(value) != int:"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         if eq and value < 0:
             raise ValueError("{} must be >= 0".format(name))
-        elif not eq and value <= 0:
+        if not eq and value <= 0:
             raise ValueError("{} must be >= 0".format(name))
